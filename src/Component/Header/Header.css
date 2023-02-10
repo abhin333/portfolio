@@ -1,0 +1,93 @@
+header {
+  height: 130vh;
+  padding-top: 0.5rem;
+  overflow: hidden;
+}
+.header__container {
+  text-align: center;
+  height: 100%;
+  position: relative;
+}
+
+/* ====cta====== */
+
+.cta {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+/* =====social====== */
+.header__social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  position: absolute;
+  left: 0;
+  bottom: 5rem;
+}
+.header__social::after {
+  content: "";
+  width: 1px;
+  height: 2rem;
+  background-color: var(--color-primary);
+}
+
+/* =====me====== */
+
+.me {
+  background: linear-gradient(var(--color-primary), transparent);
+  width: 22rem;
+  height: 30rem;
+  position: absolute;
+  margin-top: 2rem;
+  left: calc(50% - 11rem);
+  border-radius: 12rem 12rem 0 0;
+  overflow: hidden;
+  padding: 5rem 1.5rem 1.5rem 1.5rem;
+  align-items: center;
+}
+
+/* =====scroll down====== */
+
+.scroll__down {
+  position: absolute;
+  right: -2.3rem;
+  bottom: 10rem;
+  transform: rotate(90deg);
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+/* #=======Media Query======[Medium Devices]# */
+
+@media Screen and (max-width:1024px){
+  
+    header{
+        height: 130vh;
+    }
+     .header__social,.scroll__down{
+    display: none ;
+  }
+  .me {
+ 
+}
+    
+}
+
+/* #=======Media Query======[Small Devices]# */
+
+@media Screen and (max-width: 600px) {
+  .header__social,.scroll__down {
+    display: none;
+  }
+  .me{
+    width:18rem;
+    left: calc(50% - 9rem);
+  }
+   header{
+        height: 131vh;
+    }
+}
