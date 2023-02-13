@@ -1,10 +1,24 @@
-import React from 'react'
-import './Contact.css'
-import {MdMarkEmailUnread} from "react-icons/md"
-import { RiWhatsappFill } from "react-icons/ri"
+import React, { useRef } from "react";
+import "./Contact.css";
+import { MdMarkEmailUnread } from "react-icons/md";
+import { RiWhatsappFill } from "react-icons/ri";
 import { BsLinkedin } from "react-icons/bs";
-
+import emailjs from "emailjs-com";
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_yqrrv2x",
+        "template_qggt1zg",
+        form.current,
+        "Y_HlEaixg-so_4Km8"
+      )
+      e.target.reset()
+  };
+
   return (
     <>
       <section id="contact">
@@ -15,7 +29,7 @@ const Contact = () => {
             <article className="contact__option">
               <MdMarkEmailUnread className="conatct_option-icon" />
               <h4>Email</h4>
-              <h5 className='h55'>abhinpradeepan@gmail.com</h5>
+              <h5 className="h55">abhinpradeepan123@gmail.com</h5>
               <a href="mailto:abhinpradeepan123@gmail.com" target="_blank">
                 Send a Message
               </a>
@@ -35,13 +49,13 @@ const Contact = () => {
               <BsLinkedin className="conatct_option-icon" />
               <h4>LinkedIn</h4>
               <h5>abhin</h5>
-              <a href="mailto:abhinpradeepan@gmail.com" target="_blank">
+              <a href="mailto:abhinpradeepan123@gmail.com" target="_blank">
                 Send a Message
               </a>
             </article>
           </div>
 
-          <form action="">
+          <form ref={form} onSubmit={sendEmail}>
             <input
               type="text"
               name="name"
@@ -61,20 +75,20 @@ const Contact = () => {
               required
             ></textarea>
             <div className="btnn">
-            <button type="submit" className="btn btn-primary">
-              Send Message
-            </button>
-            <input
-              type="reset"
-              value="Reset"
-              className="btn btn-primary"
-            ></input>
+              <button type="submit" className="btn btn-primary">
+                Send Message
+              </button>
+              <input
+                type="reset"
+                value="Reset"
+                className="btn btn-primary"
+              ></input>
             </div>
           </form>
         </div>
       </section>
     </>
   );
-}
+};
 
-export default Contact
+export default Contact;
