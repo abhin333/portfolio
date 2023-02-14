@@ -34,6 +34,9 @@ margin-bottom: 1rem;
 /* #=======Media Query======[Medium Devices]# */
 
 @media Screen and (max-width:1024px){
+   .container .portfolio__container{
+    width: var(--container-width-md);
+  }
   .portfolio__container{
     grid-template-columns: 1fr 1fr;
     gap: 1.2rem;
@@ -49,6 +52,9 @@ margin-bottom: 1rem;
 /* #=======Media Query======[Small Devices]# */
 
 @media Screen and (max-width: 600px) {
+  .container .portfolio__container{
+    width: var(--container-width-sm);
+  }
   .portfolio__container{
     grid-template-columns: 1fr;
     gap: 1rem;

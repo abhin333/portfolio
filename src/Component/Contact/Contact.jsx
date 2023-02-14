@@ -60,18 +60,21 @@ const Contact = () => {
               type="text"
               name="name"
               placeholder="your full name"
+              autocomplete="off"
               required
             />
             <input
               type="email"
               name="eamail"
               placeholder="your email "
+              autocomplete="off"
               required
             />
             <textarea
               name="message"
               rows="7"
               placeholder="enther the message"
+              autocomplete="off"
               required
             ></textarea>
             <div className="btnn">

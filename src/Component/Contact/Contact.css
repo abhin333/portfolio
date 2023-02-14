@@ -56,7 +56,9 @@ input,textarea{
 
 @media Screen and (max-width:1024px){
 
-
+.container .container__contact{
+    width: var(--cotainer-width-md);
+}
 
  .h55{
     white-space: nowrap; 

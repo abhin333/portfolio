@@ -64,22 +64,21 @@ header {
 /* #=======Media Query======[Medium Devices]# */
 
 @media Screen and (max-width:1024px){
-  
-    header{
-        height: 130vh;
-    }
+.container .header__container{
+    width: var(--cotainer-width-md);
+  }
      .header__social,.scroll__down{
     display: none ;
   }
-  .me {
- 
-}
-    
+
 }
 
 /* #=======Media Query======[Small Devices]# */
 
 @media Screen and (max-width: 600px) {
+  .container .header__container{
+    width: var(--cotainer-width-sm);
+  }
   .header__social,.scroll__down {
     display: none;
   }
@@ -87,7 +86,8 @@ header {
     width:18rem;
     left: calc(50% - 9rem);
   }
-   header{
-        height: 131vh;
-    }
+  header{
+    height: 100vh;
+  }
+   
 }

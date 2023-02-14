@@ -63,6 +63,9 @@
 /* #=======Media Query======[Medium Devices]# */
 
 @media Screen and (max-width:1024px){
+   .container .about__container{
+      width: var(--container-width-md);
+   }
   .about__container{
     grid-template-columns: 1fr;
     gap: 0;
@@ -83,6 +86,9 @@
 /* #=======Media Query======[Small Devices]# */
 
 @media Screen and (max-width:600px){
+   .container .about__container{
+      width: var(--container-width-sm);
+   }
  .about__me{
     width: 60%;
     margin: 0 auto 0;

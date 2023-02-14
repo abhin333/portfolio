@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.css";
-import Me from "../../assets/me-about.jpg";
+import Me from "../../assets/me-about.jpeg";
 import { FaAward, FaUsers } from "react-icons/fa";
 import { MdComputer } from "react-icons/md";
 const About = () => {
@@ -34,10 +34,11 @@ const About = () => {
               </article>
             </div>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas
-              tempora velit, ipsum adipisci molestiae optio veniam alias
-              doloribus voluptatum similique architecto molestias fuga magni
-              consequatur deleniti odit temporibus, eligendi aspernatur.
+              A Web Developer is a professional who is responsible for the
+              design and construction of websites. They ensure that sites meet
+              user expectations by ensuring they look good, run smoothly and
+              offer easy access points with no loading issues between pages or
+              error messages.
             </p>
             <a href="#contact" className="btn btn-primary">
               Let's Talk

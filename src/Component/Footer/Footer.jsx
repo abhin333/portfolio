@@ -3,7 +3,7 @@ import './Footer.css'
 import {
   AiFillFacebook,
   AiFillInstagram,
-  AiOutlineWhatsApp,
+  AiOutlineTwitter,
 } from "react-icons/ai";
 const Footer = () => {
   return (
@@ -29,9 +29,15 @@ const Footer = () => {
         </li>
       </ul>
       <div className="footer__socials">
-        <a href="https://facebook.com"><AiFillFacebook/></a>
-        <a href="https://instagram.com"><AiFillInstagram/></a>
-        <a href="https://twitter.com"><AiOutlineWhatsApp/></a>
+        <a href="https://facebook.com">
+          <AiFillFacebook />
+        </a>
+        <a href="https://instagram.com">
+          <AiFillInstagram />
+        </a>
+        <a href="https://twitter.com">
+          <AiOutlineTwitter />
+        </a>
       </div>
       <div className="footer__copyright">
         <small>@abhin.All rights reserver</small>
