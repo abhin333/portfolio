@@ -89,22 +89,30 @@ header {
  
 }
 /* 1792x828px at 326ppi */
+
 @media only screen 
-    and (device-width : 414px) 
-    and (device-height : 896px) 
-    and (-webkit-device-pixel-ratio : 2) 
-   { 
-      header{
-        height: 80vh;
-      }
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px) 
+  and (-webkit-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    header{
+      max-height: 100vh;
     }
-
-
+}
   
-    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-device-pixel-ratio: 2) {
-      /* Styles for iPhone SE */
-      header{
-        height: 100vh;
-      }
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 896px) 
+  and (-webkit-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    header{
+      height: 77vh;
     }
-    
+  }
+@media only screen and (max-device-width: 319px) {
+  header{
+    height:100vh;
+  }
+  
+  
+}
