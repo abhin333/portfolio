@@ -99,3 +99,12 @@ header {
       }
     }
 
+
+  
+    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-device-pixel-ratio: 2) {
+      /* Styles for iPhone SE */
+      header{
+        height: 100vh;
+      }
+    }
+    
