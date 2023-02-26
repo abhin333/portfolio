@@ -28,7 +28,7 @@ const Portfolio = () => {
                 Github
               </a>
               <a
-                href="https://abhin333.github.io/abhin/"
+                href="https://hanveev.pythonanywhere.com/"
                 className="btn btn-primary"
                 target="_blank"
               >
@@ -50,7 +50,7 @@ const Portfolio = () => {
                 Github
               </a>
               <a
-                href="https://abhin333.github.io/abhin/"
+                href="https://camerarentnew.pythonanywhere.com/"
                 className="btn btn-primary"
                 target="_blank"
               >
@@ -72,7 +72,7 @@ const Portfolio = () => {
                 Github
               </a>
               <a
-                href="https://abhin333.github.io/abhin/"
+                href="https://olx-clone-e55a9.web.app/"
                 className="btn btn-primary"
                 target="_blank"
               >
@@ -95,7 +95,7 @@ const Portfolio = () => {
                 Github
               </a>
               <a
-                href="https://abhin333.github.io/abhin/"
+                href="https://netflix-98727.web.app/"
                 className="btn btn-primary"
                 target="_blank"
               >
