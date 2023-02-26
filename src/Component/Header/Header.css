@@ -106,7 +106,7 @@ header {
   and (-webkit-device-pixel-ratio: 2)
   and (orientation: portrait) {
     header{
-      height: 77vh;
+      height: 100vh;
     }
   }
 @media only screen and (max-device-width: 319px) {
@@ -121,6 +121,6 @@ header {
   and (-webkit-device-pixel-ratio: 2)
   and (orientation: portrait) {
    header{
-    height: 73vh;
+    height: 100vh;
    }
 }
