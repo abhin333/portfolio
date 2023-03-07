@@ -26,9 +26,7 @@ display: flex;
 gap: 1rem;
 margin-bottom: 1rem;
 }
-.images{
-   
-}
+
 
 
 /* #=======Media Query======[Medium Devices]# */
@@ -41,11 +39,7 @@ margin-bottom: 1rem;
     grid-template-columns: 1fr 1fr;
     gap: 1.2rem;
   }
-  section{
-    /* height: 130vh; */
-   height: 100%;
-
-  }
+ 
     
 }
 
@@ -58,11 +52,8 @@ margin-bottom: 1rem;
   .portfolio__container{
     grid-template-columns: 1fr;
     gap: 1rem;
+    padding: 2rem;
   }
-  section{
-    /* height: 132vh; */
-   height: 100%;
-
-  }
+  
 }
 

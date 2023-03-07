@@ -1,6 +1,6 @@
 header {
-  height: 130vh;
-  padding-top: 0.5rem;
+  height: 100vh;
+  padding-top: .5rem;
   overflow: hidden;
 }
 .header__container {
@@ -64,39 +64,37 @@ header {
 /* #=======Media Query======[Medium Devices]# */
 
 @media Screen and (max-width:1024px){
-.container .header__container{
+.container,.header__container{
     width: var(--cotainer-width-md);
   }
      .header__social,.scroll__down{
     display: none ;
   }
-
+ 
 }
-
+ 
 /* #=======Media Query======[Small Devices]# */
 
 @media Screen and (max-width: 600px) {
-  .container .header__container{
+  .container,.header__container{
     width: var(--cotainer-width-sm);
   }
   .header__social,.scroll__down {
     display: none;
   }
-  .me{
-    width:18rem;
-    left: calc(50% - 9rem);
-  }
- 
-}
-/* 1792x828px at 326ppi */
 
+}
+
+
+/* 1792x828px at 326ppi */
+/* 
 @media only screen 
   and (min-device-width: 320px) 
   and (max-device-width: 568px) 
   and (-webkit-device-pixel-ratio: 2)
   and (orientation: portrait) {
     header{
-      max-height: 100vh;
+      height: 130vh;
     }
 }
   
@@ -121,6 +119,6 @@ header {
   and (-webkit-device-pixel-ratio: 2)
   and (orientation: portrait) {
    header{
-    height: 100vh;
+    height: 130vh;
    }
-}
+} */

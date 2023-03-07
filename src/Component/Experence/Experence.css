@@ -37,9 +37,13 @@
 /* #=======Media Query======[Medium Devices]# */
 
 @media Screen and (max-width: 1024px) {
+  .container ,.experience__container{
+    width: var(--cotainer-width-md);
+  }
   .experience__container {
     grid-template-columns: 1fr;
   }
+
   .experience__container > div {
     width: 92%;
     padding: 1rem;
@@ -54,7 +58,10 @@
 /* #=======Media Query======[Small Devices]# */
 
 @media Screen and (max-width: 600px) {
- 
+  .container ,.experience__container{
+    width: var(--cotainer-width-sm);
+    padding: 2rem;
+  }
  
 }
 
