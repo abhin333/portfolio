@@ -14,7 +14,28 @@ const Portfolio = () => {
         <h5>My Recent Work</h5>
         <h2>portfolio</h2>
         <div className="container portfolio__container">
-          
+        <article className="portfolio__item">
+            <div className="portfolio__item-image">
+              <img src={IMG2} alt="image2" />
+            </div>
+            <h3>Easy Food </h3>
+            <div className="portfolio__item-cta">
+              <a
+                href="https://github.com/abhin333/Easy_Food.git"
+                className="btn"
+                target="_blank"
+              >
+                Github
+              </a>
+              <a
+                href="https://easy-food-123.netlify.app/"
+                className="btn btn-primary"
+                target="_blank"
+              >
+                Live Demo
+              </a>
+            </div>
+          </article>
           <article className="portfolio__item">
             <div className="portfolio__item-image">
               <img src={IMG3} alt="image3" />
@@ -87,17 +108,17 @@ const Portfolio = () => {
             <div className="portfolio__item-image">
               <img src={IMG1} alt="image1" />
             </div>
-            <h3>This is a Handloom </h3>
+            <h3>Books and stationary </h3>
             <div className="portfolio__item-cta">
               <a
-                href="https://github.com/abhin333/hanveev.git"
+                href="https://github.com/abhin333"
                 className="btn"
                 target="_blank"
               >
                 Github
               </a>
               <a
-                href="https://hanveev.pythonanywhere.com/"
+                href="https://books-stationery-4f20c4.netlify.app/"
                 className="btn btn-primary"
                 target="_blank"
               >
@@ -105,34 +126,13 @@ const Portfolio = () => {
               </a>
             </div>
           </article>
-          <article className="portfolio__item">
-            <div className="portfolio__item-image">
-              <img src={IMG2} alt="image2" />
-            </div>
-            <h3>This is a Camera rent </h3>
-            <div className="portfolio__item-cta">
-              <a
-                href="https://github.com/abhin333/ecommerce.git"
-                className="btn"
-                target="_blank"
-              >
-                Github
-              </a>
-              <a
-                href="https://camerarentnew.pythonanywhere.com/"
-                className="btn btn-primary"
-                target="_blank"
-              >
-                Live Demo
-              </a>
-            </div>
-          </article>
+        
 
           <article className="portfolio__item">
             <div className="portfolio__item-image">
               <img src={IMG5} alt="image5" />
             </div>
-            <h3>Facebook clone</h3>
+            <h3>Abhin portfolio</h3>
             <div className="portfolio__item-cta">
               <a
                 href="https://github.com/abhin333/fb.git"
