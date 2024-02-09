@@ -14,11 +14,36 @@ const Portfolio = () => {
         <h5>My Recent Work</h5>
         <h2>portfolio</h2>
         <div className="container portfolio__container">
+
         <article className="portfolio__item">
             <div className="portfolio__item-image">
               <img src={IMG2} alt="image2" />
             </div>
-            <h3>Easy Food [Mobile view only] </h3>
+            <h3>Easy Food [Mobile view only] MERN </h3>
+            <div className="portfolio__item-cta">
+              <a
+                href="https://github.com/abhin333/easy-foode-node"
+                className="btn"
+                target="_blank"
+              >
+                Github
+              </a>
+              <a
+                href="https://easy-fastfood.netlify.app"
+                className="btn btn-primary"
+                target="_blank"
+              >
+                Live Demo
+              </a>
+            </div>
+          </article>
+
+
+        <article className="portfolio__item">
+            <div className="portfolio__item-image">
+              <img src={IMG2} alt="image2" />
+            </div>
+            <h3>Easy Food [Mobile view only] React js & Firebase </h3>
             <div className="portfolio__item-cta">
               <a
                 href="https://github.com/abhin333/Easy_Food.git"

@@ -46,6 +46,7 @@ const Experence = () => {
                   <small className="text-light">Experience</small>
                 </div>
               </article>
+             
             </div>
           </div>
           {/* END OF THE FRONT END */}
@@ -55,14 +56,21 @@ const Experence = () => {
               <article className="experience__details">
                 <BsFillPatchCheckFill className='experience__details-icon' />
                 <div>
-                  <h4>python</h4>
+                  <h4>Node js</h4>
                   <small className="text-light">Intermidiate</small>
                 </div>
               </article>
               <article className="experience__details">
                 <BsFillPatchCheckFill className='experience__details-icon' />
                 <div>
-                  <h4>Mysql</h4>
+                  <h4>Mongo db</h4>
+                  <small className="text-light">Intermediate</small>
+                </div>
+              </article>
+              <article className="experience__details">
+                <BsFillPatchCheckFill className='experience__details-icon' />
+                <div>
+                  <h4>firebase</h4>
                   <small className="text-light">Intermediate</small>
                 </div>
               </article>
