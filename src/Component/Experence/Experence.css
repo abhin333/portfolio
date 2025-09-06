@@ -67,3 +67,39 @@
 
 
 
+.company__experience {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.company__card {
+  background: var(--color-bg-variant);
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  transition: var(--transition);
+  box-shadow: var(--box-shadow);
+  width: 200px;
+}
+
+.company__card:hover {
+  background: var(--color-primary-variant);
+  transform: translateY(-5px);
+}
+
+.company__logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.company__details h3 {
+  margin: 0.5rem 0;
+}
+
+.text-light {
+  color: var(--color-light);
+}

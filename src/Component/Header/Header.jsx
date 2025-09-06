@@ -12,8 +12,12 @@ const Header = () => {
           <h5 className="text-light">Web Developer</h5>
           <Cta />
           <HeaderSocial />
-          <div className="me">
-            <img src={Me} alt="me" />
+          <div className="me" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <img 
+              src={Me} 
+              alt="me" 
+              style={{ width: '600px', height: '400px', objectFit: 'cover' }} 
+            />
           </div>
           <a href="#contact" className="scroll__down">
             scroll Down
