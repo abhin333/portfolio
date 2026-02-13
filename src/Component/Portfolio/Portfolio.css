@@ -57,3 +57,80 @@ margin-bottom: 1rem;
   
 }
 
+
+
+
+
+
+#portfolio {
+  text-align: center;
+}
+
+#portfolio h5 {
+  color: #38bdf8;
+  letter-spacing: 2px;
+}
+
+#portfolio h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+/* GRID */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin: 30px;
+}
+
+/* CARD */
+.portfolio-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 18px;
+  border-radius: 18px;
+  transition: 0.4s;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(56, 189, 248, 0.3);
+}
+
+/* IMAGE */
+.portfolio-img img {
+  width: 100%;
+  border-radius: 14px;
+}
+
+/* TITLE */
+.portfolio-card h3 {
+  margin: 14px 0;
+  font-size: 1rem;
+}
+
+/* BUTTONS */
+.portfolio-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.portfolio-buttons a {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-decoration: none;
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
+  transition: 0.3s;
+}
+
+.portfolio-buttons a:last-child {
+  background: #38bdf8;
+  color: #000;
+}
+
+.portfolio-buttons a:hover {
+  opacity: 0.85;
+}

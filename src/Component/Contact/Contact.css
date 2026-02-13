@@ -74,6 +74,7 @@ input,textarea{
 @media Screen and (max-width:600px){
 .container .container__contact{
     width: var(--cotainer-width-sm);
+    
   }
   
   .container.contact__container{
