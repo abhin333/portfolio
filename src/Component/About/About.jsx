@@ -33,7 +33,7 @@ const About = () => {
 
       <div className="container about__container">
         {/* IMAGE SLIDING FROM LEFT */}
-        <motion.div 
+        <motion.div
           className="about__me"
           initial="offscreen"
           whileInView="onscreen"
@@ -41,12 +41,13 @@ const About = () => {
           variants={imageVariants}
         >
           <div className="about__me-image">
-            <img src={Me} alt="Abhin — profile photo" />
+            <img src={Me} alt="Abhin, Frontend Developer" />
+
           </div>
         </motion.div>
 
         {/* CONTENT SLIDING FROM RIGHT */}
-        <motion.div 
+        <motion.div
           className="about__content"
           initial="offscreen"
           whileInView="onscreen"
