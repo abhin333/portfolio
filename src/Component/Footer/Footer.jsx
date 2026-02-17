@@ -13,19 +13,19 @@ const Footer = () => {
       </a>
       <ul className="permalinks">
         <li>
-          <a href="#">home</a>
+          <a href="#home">home</a>
         </li>
         <li>
-          <a href="#">About</a>
+          <a href="#About">About</a>
         </li>
         <li>
-          <a href="#">experice</a>
+          <a href="#experence">experence</a>
         </li>
         <li>
-          <a href="#">portfolio</a>
+          <a href="#portfolio">portfolio</a>
         </li>
         <li>
-          <a href="#">contacts</a>
+          <a href="#contacts">contacts</a>
         </li>
       </ul>
       <div className="footer__socials">
