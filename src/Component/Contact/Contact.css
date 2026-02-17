@@ -80,6 +80,8 @@ input,textarea{
   .container.contact__container{
     grid-template-columns: 1fr;
     gap: 2rem;
+    width: 86%;
+
 }
  
 }

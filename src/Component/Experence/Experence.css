@@ -184,7 +184,7 @@
 
 @media screen and (max-width: 600px) {
   .experience__container {
-    width: 95% !important;
+    width: 90% !important;
     gap: 1.5rem;
   }
 

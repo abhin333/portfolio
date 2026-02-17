@@ -7,7 +7,6 @@ import ParticleBackground from './ParticleBackground'
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 const Header = () => {
-  // Optional: This creates a slight "shrinking" effect as you scroll down
   const { scrollY } = useScroll();
   const scale = useTransform(scrollY, [0, 300], [1, 0.9]);
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
