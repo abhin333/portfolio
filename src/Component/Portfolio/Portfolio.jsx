@@ -1,5 +1,6 @@
 import React from "react";
 import "./Portfolio.css";
+
 import IMG1 from "../../assets/portfolio1.jpg";
 import IMG2 from "../../assets/portfolio2.png";
 import IMG3 from "../../assets/portfolio3.png";
@@ -7,179 +8,78 @@ import IMG4 from "../../assets/portfolio4.jpg";
 import IMG5 from "../../assets/portfolio5.jpg";
 import IMG6 from "../../assets/movie-logo.jpg";
 
+const projects = [
+  {
+    title: "Easy Food [Mobile view only] MERN",
+    image: IMG2,
+    github: "https://github.com/abhin333/easy-foode-node",
+    demo: "https://easy-fastfood.netlify.app",
+  },
+  {
+    title: "Easy Food [Mobile view only] React js & Firebase",
+    image: IMG2,
+    github: "https://github.com/abhin333/Easy_Food.git",
+    demo: "https://easy-food-123.netlify.app/",
+  },
+  {
+    title: "Olx Clone",
+    image: IMG3,
+    github: "https://github.com/abhin333/olx.git",
+    demo: "https://olx-clone-e55a9.web.app/",
+  },
+  {
+    title: "Netflix Clone",
+    image: IMG4,
+    github: "https://github.com/abhin333/Netflix.git",
+    demo: "https://netflixsnew.netlify.app/",
+  },
+  {
+    title: "Movie App",
+    image: IMG6,
+    github: "https://github.com/abhin333/movies",
+    demo: "https://moviesnew.netlify.app/",
+  },
+  {
+    title: "Books and stationary",
+    image: IMG1,
+    github: "https://github.com/abhin333",
+    demo: "https://books-stationery-4f20c4.netlify.app/",
+  },
+  {
+    title: "Abhin Portfolio",
+    image: IMG5,
+    github: "https://github.com/abhin333/fb.git",
+    demo: "https://abhin333.github.io/abhin/",
+  },
+];
+
 const Portfolio = () => {
   return (
-    <>
-      <section id="portfolio">
-        <h5>My Recent Work</h5>
-        <h2>portfolio</h2>
-        <div className="container portfolio__container">
+    <section id="portfolio">
+      <h5>My Recent Work</h5>
+      <h2>Portfolio</h2>
 
-        <article className="portfolio__item">
-            <div className="portfolio__item-image">
-              <img src={IMG2} alt="image2" />
+      <div className="portfolio-grid">
+        {projects.map((project, index) => (
+          <article className="portfolio-card" key={index}>
+            <div className="portfolio-img">
+              <img src={project.image} alt={project.title} />
             </div>
-            <h3>Easy Food [Mobile view only] MERN </h3>
-            <div className="portfolio__item-cta">
-              <a
-                href="https://github.com/abhin333/easy-foode-node"
-                className="btn"
-                target="_blank"
-              >
+
+            <h3>{project.title}</h3>
+
+            <div className="portfolio-buttons">
+              <a href={project.github} target="_blank" rel="noreferrer">
                 Github
               </a>
-              <a
-                href="https://easy-fastfood.netlify.app"
-                className="btn btn-primary"
-                target="_blank"
-              >
+              <a href={project.demo} target="_blank" rel="noreferrer">
                 Live Demo
               </a>
             </div>
           </article>
-
-
-        <article className="portfolio__item">
-            <div className="portfolio__item-image">
-              <img src={IMG2} alt="image2" />
-            </div>
-            <h3>Easy Food [Mobile view only] React js & Firebase </h3>
-            <div className="portfolio__item-cta">
-              <a
-                href="https://github.com/abhin333/Easy_Food.git"
-                className="btn"
-                target="_blank"
-              >
-                Github
-              </a>
-              <a
-                href="https://easy-food-123.netlify.app/"
-                className="btn btn-primary"
-                target="_blank"
-              >
-                Live Demo
-              </a>
-            </div>
-          </article>
-          <article className="portfolio__item">
-            <div className="portfolio__item-image">
-              <img src={IMG3} alt="image3" />
-            </div>
-            <h3> Olx Clone </h3>
-            <div className="portfolio__item-cta">
-              <a
-                href="https://github.com/abhin333/olx.git"
-                className="btn"
-                target="_blank"
-              >
-                Github
-              </a>
-              <a
-                href="https://olx-clone-e55a9.web.app/"
-                className="btn btn-primary"
-                target="_blank"
-              >
-                Live Demo
-              </a>
-            </div>
-          </article>
-
-          <article className="portfolio__item">
-            <div className="portfolio__item-image">
-              <img src={IMG4} alt="image4" />
-            </div>
-            <h3>Netflix Clone</h3>
-            <div className="portfolio__item-cta">
-              <a
-                href="https://github.com/abhin333/Netflix.git"
-                className="btn"
-                target="_blank"
-              >
-                Github
-              </a>
-              <a
-                href="https://netflixsnew.netlify.app/"
-                className="btn btn-primary"
-                target="_blank"
-              >
-                Live Demo
-              </a>
-            </div>
-          </article>
-
-          <article className="portfolio__item">
-            <div className="portfolio__item-image">
-              <img src={IMG6} alt="image6" />
-            </div>
-            <h3>Movie App</h3>
-            <div className="portfolio__item-cta">
-              <a
-                href="https://github.com/abhin333/movies"
-                className="btn"
-                target="_blank"
-              >
-                Github
-              </a>
-              <a
-                href="https://moviesnew.netlify.app/"
-                className="btn btn-primary"
-                target="_blank"
-              >
-                Live Demo
-              </a>
-            </div>
-          </article>
-          <article className="portfolio__item">
-            <div className="portfolio__item-image">
-              <img src={IMG1} alt="image1" />
-            </div>
-            <h3>Books and stationary </h3>
-            <div className="portfolio__item-cta">
-              <a
-                href="https://github.com/abhin333"
-                className="btn"
-                target="_blank"
-              >
-                Github
-              </a>
-              <a
-                href="https://books-stationery-4f20c4.netlify.app/"
-                className="btn btn-primary"
-                target="_blank"
-              >
-                Live Demo
-              </a>
-            </div>
-          </article>
-        
-
-          <article className="portfolio__item">
-            <div className="portfolio__item-image">
-              <img src={IMG5} alt="image5" />
-            </div>
-            <h3>Abhin portfolio</h3>
-            <div className="portfolio__item-cta">
-              <a
-                href="https://github.com/abhin333/fb.git"
-                className="btn"
-                target="_blank"
-              >
-                Github
-              </a>
-              <a
-                href="https://abhin333.github.io/abhin/"
-                className="btn btn-primary"
-                target="_blank"
-              >
-                Live Demo
-              </a>
-            </div>
-          </article>
-
-          
-        </div>
-      </section>
-    </>
+        ))}
+      </div>
+    </section>
   );
 };
 
