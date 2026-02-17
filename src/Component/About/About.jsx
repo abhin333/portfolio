@@ -41,7 +41,7 @@ const About = () => {
           variants={imageVariants}
         >
           <div className="about__me-image">
-            <img src={Me} alt="about-image" />
+            <img src={Me} alt="Abhin — profile photo" />
           </div>
         </motion.div>
 
