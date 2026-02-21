@@ -33,15 +33,28 @@ header {
   gap: 3rem;
   align-items: center;
 
-  background: rgba(255, 255, 255, 0.07);
+  background: rgba(10, 10, 10, 0.62);
+  backdrop-filter: blur(16px);
   border-radius: 3rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.22);
 
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.55);
   transform-style: preserve-3d;
   overflow: hidden;
 
-  transition: all 0.4s ease;
+  transition: transform 240ms ease, box-shadow 240ms ease, border-color 240ms ease, background 240ms ease;
+  animation: headerCardEntrance 0.8s ease-out;
+}
+
+@keyframes headerCardEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 /* Glass shine animation */
@@ -64,8 +77,31 @@ header {
 }
 
 .header__glass-card:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(77, 181, 255, 0.4);
+  background: rgba(14, 14, 14, 0.72);
+  border: 1px solid rgba(34, 197, 94, 0.55);
+  box-shadow:
+      0 26px 90px rgba(0, 0, 0, 0.65),
+      0 0 0 1px rgba(34, 197, 94, 0.18),
+      0 0 45px rgba(34, 197, 94, 0.22);
+  transform: translateY(-6px) scale(1.01);
+  animation: none;
+}
+
+@keyframes headerFloat {
+  0%, 100% {
+    transform: translateY(-8px) rotateX(3deg) rotateY(-3deg) scale(1.02);
+    box-shadow: 
+        0 40px 80px rgba(34, 197, 94, 0.35),
+        0 0 50px rgba(34, 197, 94, 0.3),
+        0 0 0 1px rgba(34, 197, 94, 0.2);
+  }
+  50% {
+    transform: translateY(-12px) rotateX(5deg) rotateY(-5deg) scale(1.03);
+    box-shadow: 
+        0 45px 90px rgba(34, 197, 94, 0.4),
+        0 0 60px rgba(34, 197, 94, 0.35),
+        0 0 0 1px rgba(34, 197, 94, 0.2);
+  }
 }
 
 /* ================= TEXT ================= */
@@ -74,7 +110,8 @@ header {
 }
 
 .header__text h5 {
-  color: var(--color-light);
+  color: rgba(255, 255, 255, 0.78);
+  opacity: 1;
 }
 
 .header__text h1 {
@@ -84,17 +121,30 @@ header {
 
 .header__bio {
   margin: 1.5rem 0 2rem;
-  color: var(--color-light);
+  color: rgba(255, 255, 255, 0.76);
+  opacity: 1;
   line-height: 1.7;
   font-size: 1.1rem;
   max-width: 450px;
 }
 
 .name-gradient {
-  background: linear-gradient(45deg, #4db5ff, #fff);
+  background: linear-gradient(45deg, #22c55e, #10b981, #059669, #16a34a, #22c55e);
+  background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
   font-weight: 800;
+  animation: gradientText 3s ease infinite;
+}
+
+@keyframes gradientText {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 .glitch-text {
