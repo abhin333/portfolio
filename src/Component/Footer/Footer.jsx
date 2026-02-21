@@ -9,12 +9,11 @@ import {
 const Footer = () => {
   return (
     <footer>
-      {/* FIXED */}
-      <a href="#home" className="footer__logo">
+      <a href="#home" className="footer__logo reveal">
         Abhin
       </a>
 
-      <ul className="permalinks">
+      <ul className="permalinks reveal delay-100">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
@@ -22,7 +21,7 @@ const Footer = () => {
         <li><a href="#contact">Contact</a></li>
       </ul>
 
-      <div className="footer__socials">
+      <div className="footer__socials reveal delay-200">
         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
           <AiFillFacebook />
         </a>
@@ -34,7 +33,7 @@ const Footer = () => {
         </a>
       </div>
 
-      <div className="footer__copyright">
+      <div className="footer__copyright reveal delay-300">
         <small>© 2026 Abhin. All rights reserved.</small>
       </div>
     </footer>

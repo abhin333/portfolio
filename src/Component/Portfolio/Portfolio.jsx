@@ -53,15 +53,21 @@ const projects = [
   },
 ];
 
+// stagger delay helper
+const delays = ['delay-100', 'delay-200', 'delay-300', 'delay-400', 'delay-500', 'delay-600'];
+
 const Portfolio = () => {
   return (
     <section id="portfolio">
-      <h5>My Recent Work</h5>
-      <h2>Portfolio</h2>
+      <h5 className="reveal">My Recent Work</h5>
+      <h2 className="reveal delay-100">Portfolio</h2>
 
       <div className="portfolio-grid">
         {projects.map((project, index) => (
-          <article className="portfolio-card" key={index}>
+          <article
+            className={`portfolio-card reveal ${delays[index % delays.length]}`}
+            key={index}
+          >
             <div className="portfolio-img">
               <img src={project.image} alt={project.title} />
             </div>

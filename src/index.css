@@ -10,12 +10,16 @@
   text-decoration: none;
 }
 :root {
-  --color-bg: #1f1f38;
-  --color-bg-variant: #2c2c6c;
-  --color-primary: #4db5ff;
-  --color-primary-variant: rgba(77, 181, 255, 0.4);
+  --color-bg: #050608;
+  --color-bg-variant: #0a0a0a;
+  --color-primary: #8b5cf6; /* violet */
+  --color-primary-variant: rgba(139, 92, 246, 0.3);
   --color-white: #fff;
-  --color-light: rgba(255, 255, 255, 0.6);
+  --color-light: rgba(255, 255, 255, 0.72);
+  --color-dark: #050608;
+  --color-green-light: #22d3ee; /* cyan (kept var name for compatibility) */
+  --color-green-dark: #fb7185;  /* pink (kept var name for compatibility) */
+  --color-black: #000000;
   --container-width-lg: 75%;
   --container-width-md: 86%;
   --container-width-sm: 90%;
@@ -30,9 +34,10 @@ html {
 body {
   font-family: "poppins", sans-serif;
   background: var(--color-bg);
-  color: var(--color-white);
+  color: rgba(255, 255, 255, 0.92);
   line-height: 1.7;
-  background-image: url(../src/assets/bg-texture.png);
+  position: relative;
+  overflow-x: hidden;
 }
 
 /* .................Gernal styles............... */
@@ -60,16 +65,18 @@ section {
 section > h2,
 section > h5 {
   text-align: center;
-  color: var(--color-light);
+  color: rgba(255, 255, 255, 0.85);
 
 }
 
 section > h2 {
   color: var(--color-primary);
   margin-bottom: 3rem;
+  font-weight: 600;
 }
 .text-light {
   color: var(--color-light);
+  opacity: 1;
 }
 
 .text-light{
@@ -94,29 +101,57 @@ a {
 }
 
 a:hover{
-  color: var(--color-white);
+  color: rgba(255, 255, 255, 0.95);
 }
 
 .btn{
   width:max-content;
   display: inline-block;
   color: var(--color-primary);
-  padding: 0.75rem 1.2rem ;
-  border-radius: 0.4rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
-  border: 1px solid var(--color-primary);
+  border: 2px solid var(--color-primary);
+  background: rgba(10, 10, 10, 0.65);
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.22), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn:hover::before {
+  left: 100%;
 }
 
 .btn:hover{
-  background-color: var(--color-white);
-  color: var(--color-bg);
-  border-color: transparent;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(139, 92, 246, 0.32), 0 0 22px rgba(34, 211, 238, 0.18);
 } 
 .btn-primary{
-  background-color: var(--color-primary);
-  color: var(--color-bg);
-  
+  background: linear-gradient(135deg, var(--color-primary), var(--color-green-light));
+  color: var(--color-white);
+  border-color: var(--color-primary);
+  box-shadow: 0 6px 18px rgba(139, 92, 246, 0.35), 0 0 18px rgba(34, 211, 238, 0.18);
+}
 
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--color-green-light), var(--color-green-dark));
+  box-shadow: 0 10px 28px rgba(34, 211, 238, 0.25), 0 0 24px rgba(251, 113, 133, 0.18);
+  transform: translateY(-3px);
 }
 
 img{
@@ -125,6 +160,71 @@ img{
   object-fit:cover;
 }
 
+
+
+/* ═══════════════════════════════════════════
+   SCROLL-REVEAL ENTRANCE ANIMATIONS
+═══════════════════════════════════════════ */
+
+/* Base hidden state – applied before element enters viewport */
+.reveal,
+.reveal-left,
+.reveal-right,
+.reveal-scale {
+  opacity: 0;
+  transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal        { transform: translateY(48px); }
+.reveal-left   { transform: translateX(-64px); }
+.reveal-right  { transform: translateX(64px); }
+.reveal-scale  { transform: scale(0.88); }
+
+/* Visible state – toggled by IntersectionObserver */
+.reveal.visible,
+.reveal-left.visible,
+.reveal-right.visible,
+.reveal-scale.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Stagger delays */
+.delay-100 { transition-delay: 0.10s !important; }
+.delay-200 { transition-delay: 0.20s !important; }
+.delay-300 { transition-delay: 0.30s !important; }
+.delay-400 { transition-delay: 0.40s !important; }
+.delay-500 { transition-delay: 0.50s !important; }
+.delay-600 { transition-delay: 0.60s !important; }
+
+/* ─── Floating glow pulse on cards / highlights ─── */
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 18px rgba(139,92,246,0.25), 0 0 32px rgba(34,211,238,0.10); }
+  50%       { box-shadow: 0 0 32px rgba(139,92,246,0.50), 0 0 56px rgba(34,211,238,0.22); }
+}
+
+/* ─── Floating bob ─── */
+@keyframes floatBob {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+
+/* ─── Shimmer sweep ─── */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Utility: add glow pulse to any element */
+.glow-pulse {
+  animation: glowPulse 3.5s ease-in-out infinite;
+}
+
+/* Utility: floating bob */
+.float-bob {
+  animation: floatBob 4s ease-in-out infinite;
+}
 
 /* #=======Media Query======[Medium Devices]# */
 
