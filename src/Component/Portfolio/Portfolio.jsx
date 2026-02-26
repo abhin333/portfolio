@@ -53,8 +53,14 @@ const projects = [
   },
 ];
 
-// stagger delay helper
-const delays = ['delay-100', 'delay-200', 'delay-300', 'delay-400', 'delay-500', 'delay-600'];
+const delays = [
+  "delay-100",
+  "delay-200",
+  "delay-300",
+  "delay-400",
+  "delay-500",
+  "delay-600",
+];
 
 const Portfolio = () => {
   return (
@@ -65,7 +71,9 @@ const Portfolio = () => {
       <div className="portfolio-grid">
         {projects.map((project, index) => (
           <article
-            className={`portfolio-card reveal ${delays[index % delays.length]}`}
+            className={`portfolio-card reveal ${
+              delays[index % delays.length]
+            }`}
             key={index}
           >
             <div className="portfolio-img">
@@ -75,10 +83,21 @@ const Portfolio = () => {
             <h3>{project.title}</h3>
 
             <div className="portfolio-buttons">
-              <a href={project.github} target="_blank" rel="noreferrer">
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="portfolio-btn github"
+              >
                 Github
               </a>
-              <a href={project.demo} target="_blank" rel="noreferrer">
+
+              <a
+                href={project.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="portfolio-btn demo"
+              >
                 Live Demo
               </a>
             </div>
